@@ -77,6 +77,7 @@ public class FermatGenerator implements PrimeGenerator {
     /**
      * Converts the integer to big integer
      *
+     * @param num to convert to big integer
      * @return the number in big integer
      */
     private BigInteger convertToBigInteger(int num) {

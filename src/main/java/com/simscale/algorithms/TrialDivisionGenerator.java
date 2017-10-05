@@ -31,6 +31,7 @@ public class TrialDivisionGenerator implements PrimeGenerator {
      * <p>
      * Works in O(logN) complexity.
      *
+     * @param num to test for primality
      * @return if number is prime
      */
     private boolean isPrime(int num) {

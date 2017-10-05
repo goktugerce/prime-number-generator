@@ -9,9 +9,16 @@ import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 
+/**
+ * Test cases for Miller-Rabin Generator.
+ */
 public class MillerRabinGeneratorTest {
     private MillerRabinGenerator generator = new MillerRabinGenerator();
 
+    /**
+     * Tests for numbers between 1 and 10.
+     * @throws Exception if there is an error
+     */
     @Test
     public void generate() throws Exception {
         System.out.println("Testing for numbers between 1 and 10");
@@ -23,6 +30,10 @@ public class MillerRabinGeneratorTest {
         assertEquals(expected, actual);
     }
 
+    /**
+     * Tests for numbers between 1365 and 1431.
+     * @throws Exception if there is an error
+     */
     @Test
     public void generate2() throws Exception {
         System.out.println("Testing for numbers between 1365 and 1431");
@@ -34,6 +45,10 @@ public class MillerRabinGeneratorTest {
         assertEquals(expected, actual);
     }
 
+    /**
+     * Tests for numbers between -20 and 20.
+     * @throws Exception if there is an error
+     */
     @Test
     public void generate3() throws Exception {
         System.out.println("Testing for both negative and positive numbers");
@@ -45,6 +60,10 @@ public class MillerRabinGeneratorTest {
         assertEquals(expected, actual);
     }
 
+    /**
+     * Tests for numbers between -20 and 0.
+     * @throws Exception if there is an error
+     */
     @Test
     public void generate4() throws Exception {
         System.out.println("Testing negative numbers and empty result");
