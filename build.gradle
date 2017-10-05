@@ -1,0 +1,45 @@
+group 'com.simscale'
+version '1.0-SNAPSHOT'
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.7.RELEASE")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'war'
+apply plugin: 'application'
+apply plugin: 'org.springframework.boot'
+war {
+    baseName = 'PrimeNumberGenerator'
+    version = '1.0.0-BUILD-SNAPSHOT'
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile 'junit:junit:4.12'
+    compile 'junit:junit:4.12'
+    compile("org.springframework.boot:spring-boot-starter")
+    compile('org.springframework.boot:spring-boot-starter-web')
+    compile("org.springframework:spring-jdbc")
+    compile('org.springframework.boot:spring-boot-starter-jdbc')
+    compile('mysql:mysql-connector-java')
+    compile('org.hibernate:hibernate-core:5.2.11.Final')
+    testCompile('org.springframework.boot:spring-boot-starter-test')
+}
+
+mainClassName = System.getProperty("mainClass")
+jar {
+    baseName = System.getProperty("jarName")
+}
